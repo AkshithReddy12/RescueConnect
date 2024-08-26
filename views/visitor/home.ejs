@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      .navbar{
+  background-color:rgba(47, 6, 78,0.5)
+  
+}
+.navbar a{
+ 
+  transition: all 1s;
+}
+.navbar a:hover{
+  background-color:rgba(47, 6, 78,0.6);
+  transform: translateY(-2px);
+ /* border-radius:25%;  */
+}
+
+
+.navbar-brand{
+    margin-bottom:5px !important;
+}
+
+h5{
+    font-family: "Raleway";
+}
+.carousel{
+  transition:all 2s;
+}
+/* .carousel:hover{
+  transform:scale(0.9)
+} */
+.card{
+  transition:3s all;
+}
+/* .card:hover{
+  background-color:rgba(85, 184, 204, 0.7)
+  
+}
+.card *:hover{
+  color:white;
+  font-family: raleway;
+} */
+footer{
+  transition: all 2s;
+}
+.section *{
+  color:black;
+}
+/* footer:hover{
+ background-color: #9bf4ee;
+ opacity:75%;
+ color:white;
+ font-family: raleway;
+} */
+
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container-fluid">
+        <h2 class="navbar-brand text-light fs-3" style="font-family:roboto" href="#">resQconnect</h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/agencyRegistration">agencyRegistration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/ReportIncident">Report Incident</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Signup</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success text-light" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+<div class="carouselandaboutus">
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide m-3 h-30"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/image1.jpg.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              My job isn't to fix or rescue or to save. It's to accompany, see
+              people, listen to them.
+            </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image3.jpg.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              We live like we are on a pleasure cruise, when we are really on a
+              rescue mission from God. Read more at
+              </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image2.jpg.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>We're our own dragons as well as our own heroes, and we have to rescue ourselves from ourselves.
+               </h5>  
+        </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <div class="aboutUs m-3">
+        <div class="card ">
+            <div class="card-body">
+              <center><h2 class="card-title fw-bold" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About Us</h3></center>
+              <hr>
+              <p class="card-text">At Collaborative Rescue Teams, we're on a mission to revolutionize the way rescue operations are conducted by fostering collaboration among various rescue teams worldwide. Our platform brings together professionals, volunteers, and organizations dedicated to saving lives and providing aid during emergencies and disasters.
+                <br> <br>
+                <h5>Our Vision </h5> <hr>
+                We envision a world where no life is lost due to lack of coordination or resources during rescue operations. By uniting rescue teams under a common platform, we aim to enhance the efficiency, effectiveness, and reach of emergency response efforts globally.
+                <br> <br>
+                <h5>Our Mission</h5>
+                <hr>
+                Our mission is to create a seamless network of rescue teams, enabling them to collaborate, share resources, and coordinate their efforts in real-time during emergencies. Through our platform, we strive to empower every rescuer with the tools, knowledge, and support they need to save lives and alleviate suffering in times of crisis.
+                <br> <br>
+                <h5>What We Do</h5>
+                <hr>
+                
+                <ul>
+            <li>
+
+             Facilitate Collaboration: We provide a central hub where rescue teams can connect, communicate, and collaborate on rescue missions, regardless of their location or specialization.
+            </li>   
+            <li>    
+                Resource Sharing: Our platform enables rescue teams to share critical resources such as personnel, equipment, and expertise, ensuring that help reaches those in need swiftly and effectively.
+            </li>
+            <li>
+                Real-Time Coordination: With our real-time coordination features, rescue teams can synchronize their efforts, track incidents, and allocate resources efficiently during emergencies, minimizing response time and maximizing impact.
+            </li>
+            <li>
+                Training and Education: We offer training programs, workshops, and educational resources to equip rescue teams with the latest skills, techniques, and best practices in emergency response and disaster management.</p>
+            </li>
+            </ul>
+                
+            </div>
+          </div>
+    </div>
+
+  </div>
+  <!-- <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer> -->
+
+</html>

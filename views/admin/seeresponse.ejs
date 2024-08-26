@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Request Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .request-box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="request-box">
+            <h5>Resource Request Details</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Resource Name:</h6>
+                    <p id="resource-type"><%= r.ResourceType %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Quantity:</h6>
+                    <p id="quantity"><%= r.Quantity %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Agency Name:</h6>
+                    <p><%= r.TargetAgencyName %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Request Date:</h6>
+                    <p id="request-date"><%= r.RequestDate %></p>
+                </div>
+            </div>
+           
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Request Status:</h6>
+                    <p id="request-status"><%= r.RequestStatus %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Priority Level:</h6>
+                    <p id="priority-level"><%= r.PriorityLevel %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Request Description:</h6>
+                    <p id="request-description"><%= r.RequestDescription %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>response:</h6>
+                    <p><%= r.ResponseDescription %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

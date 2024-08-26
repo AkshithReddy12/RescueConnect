@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Request Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .request-box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <% for(let r of result){ %>
+    <div class="container">
+        <div class="request-box">
+            <h5>Resource Request Details</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Incident Title:</h6>
+                    <p id="resource-type"><%= r.IncidentTitle %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Incident type:</h6>
+                    <p id="quantity"><%= r.IncidentType %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Incident Description:</h6>
+                    <p id="request-description"><%= r.IncidentDescription %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>occured Date:</h6>
+                    <p id="request-date"><%= r.IncidentDate %></p>
+                </div>
+            </div>
+           
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>person name:</h6>
+                    <p id="request-status"><%= r.person_name %></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>contact:</h6>
+                    <p id="priority-level"><%= r.phone %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>address:</h6>
+                    <p id="request-description"><%= r.Incidentaddress %></p>
+                </div>
+                <div class="col-md-6">
+                    <form action="/admin/<%=r.IncidentID %>/incident" method="post">
+                    <label for="status" class="form-label">response</label>
+                    <select class="form-select" id="status" name="status">
+                        <option value="verified">verified</option>
+                        <option value="rejected">rejected</option>
+                    </select>
+                    
+                    <button type="submit">submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

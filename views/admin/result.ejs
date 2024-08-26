@@ -1,0 +1,49 @@
+<%layout('layouts/boilerplate')%>
+<h1 class="text-center">Request for Help</h1>
+<div class="row mb-3">
+    <div class="col-6 offset-3">
+        <form action="/admin/request" method="POST" novalidate class="validated-form" >
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="title" class="form-label">quantity</label>
+                <input type="text" id="title" name="quantity" class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+           
+            <div class="mb-3">
+                <button class="btn btn-success">Search resource</button>
+            </div>
+        </form>
+        <table id="myTable" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Person</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <% for(let res of result){ %>
+                <tr>
+                    <td><%= res.agency_name %></td>
+                    <td><%= res.contact_person%></td>
+                    <td><%= res.contact_phone %></td>
+                    <td><%= res.address %></td>
+                    <td><a href="/admin/request/<%= res.agency_id %>/indirect" target="_blank">request</a></td>
+                  </tr>
+                <% } %>
+            </tbody>
+          </table>
+    </div>
+</div>

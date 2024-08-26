@@ -1,0 +1,224 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Raise Alerts</title>
+</head>
+<body class="d-flex flex-column vh-100">
+    <main class="container mt-5">
+        <div class="row mb-3">
+            <div class="col-md-12 mb-3">
+              <h4>Raise Alerts</h4>
+              <div class="card">
+                <div class="card-body">
+                  <form action="/admin/raiseAlert" method="post">
+                    <div class="mb-3">
+                      <label for="disaster" class="form-label">Disaster title</label>
+                      <input type="text" class="form-control" id="disaster" name="disaster">
+                    </div>
+                    <div class="mb-3">
+                        <label for="distype" class="form-label">disaster requirement</label>
+                        <select class="form-select" id="distype" name="distype">
+                            <option value="fire department">Fire department</option>
+                            <option value="police department">police department</option>
+                            <option value="emergency medical services(ems)">emergency medical services</option>
+                            <option value="search and rescue">search and rescue</option>
+                            <option value="disaster response force">disaster response force</option>
+                        </select>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                      <label for="description" class="form-label">Description</label>
+                      <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label" for="expDate">occured date time</label>
+                      <input class="form-control"  type="datetime-local" name="expectedDateTime" id="expDate" required>
+                  </div>
+                    <button type="submit" class="btn btn-success">Raise</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+   
+   
+</body>
+</html> -->
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...your-sha512-hash-here..."
+      crossorigin="anonymous"
+    />
+    <style>
+    
+      form{
+        font-family: "Anonymous Pro", 'Times New Roman', Times, serif;
+      }
+      .bg-image{
+      /* filter:brightness(0.6) */
+        filter:opacity(80%)
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <h1 class="text-center">Report An Incident(Man Made disasters)</h1>
+      <div class="col-6 offset-3">
+          <form action="/reportincident" method="post" novalidate class="validated-form">
+              
+            <div class="mb-3">
+                <label for="disaster" class="form-label">Disaster title</label>
+                <input type="text" class="form-control" id="disaster" name="disaster">
+              </div>
+              
+                <div class="mb-3">
+                  <h6>Response:</h6>
+                <pre id="response"></pre>
+              
+              </div>
+            
+            <div class="mb-3">
+              <label for="department" class="form-label">Department</label>
+              <input type="text" class="form-control" id="department" name="department" readonly>
+            </div>
+
+              
+              <div class="mb-3">
+                <label class="form-label" for="expDate">occured date time</label>
+                <input class="form-control"  type="datetime-local" name="datetime" id="expDate" required>
+            </div>
+        
+        
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+              </div>
+              <div class="row">
+                <div class="col">
+            <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" id="username" name="username" class="form-control" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+              </div>
+            </div>
+              <div class="col">
+              <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+              </div>
+            </div>
+            </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">address</label>
+                <input type="text" id="address" name="address" class="form-control" value=" ">
+            </div>
+            <div class="row">
+              <div class="col">
+              <div class="mb-3">
+                  <label for="latitude" class="form-label">Latitude</label>
+                  <input type="text" id="latitude" name="latitude" class="form-control" value=" ">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                  <label for="longitude" class="form-label">Longitude</label>
+                  <input type="text" id="longitude" name="longitude" class="form-control" value=" ">
+              </div>
+            </div>
+            </div>
+              <button type="button" class="btn btn-primary mb-3" onclick="getLocation()">Use Your Current Location</button>
+             
+              <div class="mb-3">
+                  <button class="btn btn-success">submit</button>
+              </div>
+          </form>
+          <!-- <p>For Volunteer Registration <a href="/volunteer/signup">Click here</a></p> -->
+      </div>
+  </div>
+
+  <script>
+      const latitude = document.getElementById("latitude");
+      const longitude = document.getElementById("longitude");
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+              addressInput.value = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          const lat = position.coords.latitude;
+          const long = position.coords.longitude;
+          // addressInput.value = Latitude: ${latitude}, Longitude: ${longitude};
+          latitude.value=`${lat}`;
+          longitude.value=`${long}`;
+      }
+  </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.getElementById('disaster').addEventListener('blur', async function (e) {
+          const incidentText = e.target.value;
+          const responseElement = document.getElementById('response');
+          const dept=document.getElementById('department');
+          responseElement.textContent = 'Processing...';
+
+          try {
+              const response = await fetch('/classify-incident', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ incident: incidentText }),
+              });
+
+              const result = await response.json();
+              responseElement.textContent = result;
+              dept.value=result;
+          } catch (error) {
+              responseElement.textContent = 'Error: ' + error.message;
+          }
+      });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@google-ai/generativelanguage": "^2.5.0",
+    "alert": "^6.0.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "google-auth-library": "^9.10.0",
+    "mysql": "^2.18.1",
+    "node-notifier": "^10.0.1",
+    "openai": "^4.48.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
+}
